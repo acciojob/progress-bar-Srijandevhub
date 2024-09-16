@@ -1,1 +1,57 @@
 /*  your css code here. If applicable */
+.d-flex {
+  display: flex;
+  margin-bottom: 15px;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #ddd;
+  border-radius: 50%;
+  margin-left: 20px;
+  position: relative;
+}
+.circle.active {
+  border-color: blue;
+}
+.d-flex .cirle:first-child {
+  margin-left: 0px;
+}
+.circle::before {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: -23px;
+  transform: translateY(-50%);
+}
+.d-flex .circle:first-child::before {
+  display: none;
+}
+.circle.active::before {
+  background-color: blue;
+}
+.d-flex button {
+  padding: 5px 12px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  min-width: 76px;
+  cursor: pointer;
+}
+.d-flex button:hover {
+  opacity: 0.7;
+}
